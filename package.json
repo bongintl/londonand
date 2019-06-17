@@ -1,0 +1,36 @@
+{
+  "name": "bong-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.0.0",
+    "cheerio": "^0.22.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^2.0.1",
+    "gulp-util": "^3.0.8",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "detectcss": "^1.0.2",
+    "eases": "^1.0.8",
+    "gl-mat4": "^1.1.4",
+    "gl-now": "^1.4.0",
+    "gl-quat": "^1.0.0",
+    "gl-vec3": "^1.0.3",
+    "mithril": "^1.0.1",
+    "promise": "^7.1.1"
+  }
+}
