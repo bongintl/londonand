@@ -45,12 +45,8 @@ a {
   left: -100%;
   width: 100%;
   height: 100%;
-  -webkit-transition: -webkit-transform .35s;
-  transition: -webkit-transform .35s;
   transition: transform .35s;
-  transition: transform .35s, -webkit-transform .35s;
-  -webkit-transform: translateX(2em);
-          transform: translateX(2em);
+  transform: translateX(2em);
   cursor: pointer;
   padding-right: 2em; }
   @media (min-width: 1025px) {
@@ -59,11 +55,9 @@ a {
       width: 50%; } }
   .about_open {
     cursor: default;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%); }
+    transform: translateX(100%); }
     .about_open:after {
-      -webkit-transform: translateY(-50%) rotate(180deg);
-              transform: translateY(-50%) rotate(180deg); }
+      transform: translateY(-50%) rotate(180deg); }
   .about__inner {
     height: 100%;
     overflow: scroll; }
@@ -109,24 +103,17 @@ a {
       background-size: 100%;
       background-position: center center;
       background-repeat: no-repeat;
-      -webkit-transition: -webkit-transform .35s;
-      transition: -webkit-transform .35s;
       transition: transform .35s;
-      transition: transform .35s, -webkit-transform .35s;
-      -webkit-transform: translateY(-50%);
-              transform: translateY(-50%);
-      -webkit-transform-origin: 50% 50%;
-              transform-origin: 50% 50%; }
+      transform: translateY(-50%);
+      transform-origin: 50% 50%; }
       .about_open .about__toggle:after {
-        -webkit-transform: translateY(-50%) rotate(180deg);
-                transform: translateY(-50%) rotate(180deg); }
+        transform: translateY(-50%) rotate(180deg); }
   .about__email {
     position: absolute;
     left: 1.33em;
     bottom: 1.33em;
     margin: 0;
     border-bottom: 1px solid white;
-    -webkit-transition: opacity .2s;
     transition: opacity .2s; }
     @media (min-width: 669px) {
       .about__email {
@@ -160,7 +147,6 @@ a {
     margin-right: .75em;
     border-bottom: 1px solid black;
     opacity: .15;
-    -webkit-transition: opacity .2s;
     transition: opacity .2s;
     margin: 6px 1em 6px 0;
     float: left; }
@@ -188,7 +174,6 @@ a {
     padding: 0; }
     .cities ul li {
       opacity: .15;
-      -webkit-transition: opacity .25s;
       transition: opacity .25s;
       cursor: pointer;
       padding: 6px 0; }
@@ -196,7 +181,6 @@ a {
         .cities ul li {
           padding: 0; } }
       .cities ul li.active {
-        -webkit-transition: opacity .25s;
         transition: opacity .25s;
         opacity: 1; }
 
@@ -208,16 +192,20 @@ a {
     padding-top: 0; }
   .open-letter__email {
     margin-top: 3em; }
-  .open-letter__reveal {
-    pointer-events: none;
-    position: absolute;
-    left: 0;
-    top: -100%;
-    width: 100%;
-    height: 200%;
-    background: -webkit-linear-gradient(top, transparent 0%, black 50%, black 100%);
-    background: linear-gradient(to bottom, transparent 0%, black 50%, black 100%);
-    -webkit-transition: -webkit-transform 1s;
-    transition: -webkit-transform 1s;
-    transition: transform 1s;
-    transition: transform 1s, -webkit-transform 1s; }
+
+.accordion__body {
+  position: relative;
+  overflow: hidden;
+  display: none; }
+  .accordion__body p:first-of-type {
+    padding-top: 0; }
+
+.accordion__reveal {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 50%, black 100%);
+  transition: transform 1s; }

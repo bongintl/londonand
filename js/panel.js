@@ -45,21 +45,36 @@ document.body.addEventListener( 'click', e => {
         
     }
     
+});
+
+const email = document.querySelector('.about__email');
+[ ...document.querySelectorAll('.accordion') ].forEach( container => {
+    const expand = container.querySelector( '.accordion__expand' );
+    const body = container.querySelector( '.accordion__body' );
+    const reveal = container.querySelector( '.accordion__reveal' );
+    expand.addEventListener('click', () => {
+        body.style.display = 'block';
+        requestAnimationFrame(() => {
+            reveal.style[ PREFIXED_TRANSFORM ] = 'translateY(100%)';
+        })
+        email.style.opacity = 0;
+        email.style.pointerEvents = 'none';
+    })
 })
 
-document.querySelector('.expand').addEventListener('click', () => {
+// document.querySelector('.expand').addEventListener('click', () => {
     
-    var letter = document.querySelector('.open-letter');
-    var reveal = document.querySelector('.open-letter__reveal');
-    var email = document.querySelector('.about__email');
+//     var letter = document.querySelector('.open-letter');
+//     var reveal = document.querySelector('.open-letter__reveal');
+//     var email = document.querySelector('.about__email');
     
-    letter.style.display = 'block';
-    email.style.opacity = 0;
-    email.style.pointerEvents = 'none';
+//     letter.style.display = 'block';
+//     email.style.opacity = 0;
+//     email.style.pointerEvents = 'none';
     
-    requestAnimationFrame(() => {
-        reveal.style[ PREFIXED_TRANSFORM ] = 'translateY(100%)';
-    })
+//     requestAnimationFrame(() => {
+//         reveal.style[ PREFIXED_TRANSFORM ] = 'translateY(100%)';
+//     })
     
-})
+// })
 
